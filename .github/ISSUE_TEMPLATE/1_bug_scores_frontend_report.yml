@@ -40,9 +40,9 @@ body:
     label: What environment is the bug/issue detected in.
     description: Please specify the target Scores Platform issue can be found. Note, `DEV` is reserved for internal testers.
     options:
-      - label: Production (scores.betarena.com)
+      - label: 🟥 Production (scores.betarena.com)
         required: false
-      - label: Development
+      - label: 🟦 Development
         required: false
 
 - type: checkboxes
@@ -50,6 +50,8 @@ body:
   attributes:
     label: What browsers are you seeing the problem on?
     options:
+      - label: 💥 All Browsers
+        required: false
       - label: Firefox
         required: false
       - label: Chrome
@@ -61,12 +63,15 @@ body:
       - label: Brave
         required: false
       - label: Opera
+        required: false
 
 - type: checkboxes
   id: devices
   attributes:
     label: What device/platform can the problem be seen?
     options:
+      - label: 💥 All Devices
+        required: false
       - label: 📱 Mobile
         required: false
       - label: 💻 Tablet
@@ -81,7 +86,7 @@ body:
     
       For example:
       - Navigate here, [link] and click on [this].
-      - Login as a user, and click [this]
+      - Login as a user, and click [this].
   validations:
     required: false
 
