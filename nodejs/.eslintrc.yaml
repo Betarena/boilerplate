@@ -1,0 +1,121 @@
+root: true
+
+env:
+  es6: true
+  node: true
+
+extends:
+  - eslint:recommended
+  - plugin:import/errors
+  - plugin:import/warnings
+  - plugin:import/typescript
+  # 🔗 read-more |:| https://www.npmjs.com/package/eslint-config-google
+  - google
+  - plugin:@typescript-eslint/strict
+  # ╭─────
+  # │ NOTE: |:| (below) already comes bundled with 'plugin:@typescript-eslint/strict'.
+  # ╰─────
+  # - plugin:@typescript-eslint/recommended
+  # - plugin:@typescript-eslint/stylistic
+
+parser:
+  "@typescript-eslint/parser"
+
+parserOptions:
+  project:
+    - tsconfig.json
+    # - tsconfig.dev.json
+  sourceType: module
+
+ignorePatterns:
+  # ╭─────
+  # │ NOTE: |:| ignore build files.
+  # ╰─────
+  - /lib/**/*
+  - /dist/**/*
+  - /**/*.js
+
+plugins:
+  - "@typescript-eslint"
+  - import
+
+# 🔗 read-more |:| https://eslint.org/docs/latest/rules/
+rules:
+
+  # ╭─────
+  # │ NOTE:
+  # │ ➤ has been depreceted.
+  # ╰─────
+  # "valid-jsdoc": [..]
+  # ╭─────
+  # │ NOTE:
+  # │ ➤ Ideal, but doesn't work as expected :: [ "error", "always", { "allowNewlines": true } ]
+  # │ ➤ as it requires a space after function declaration, 'always'.
+  # ╰─────
+  func-call-spacing: 0
+
+  "@typescript-eslint/no-inferrable-types": 0
+  "@typescript-eslint/prefer-for-of": error
+  "@typescript-eslint/no-non-null-asserted-nullish-coalescing": error
+  "@typescript-eslint/no-explicit-any": 0
+
+  no-unexpected-multiline: 0
+  import/no-unresolved: 0
+  no-extra-semi: 0
+  curly:
+    - error
+    - multi
+    - consistent
+  max-len:
+    - error
+    - code: 150
+  quotes:
+    - error
+    - single
+  object-curly-spacing:
+    - error
+    - always
+  brace-style:
+    - error
+    - allman
+    - allowSingleLine: true
+  indent:
+    - error
+    - 2
+  space-before-function-paren:
+    - error
+    - anonymous: always
+      named: always
+      asyncArrow: always
+  padded-blocks:
+    - error
+    - blocks: never
+  comma-dangle:
+    - error
+    - only-multiline
+  comma-style:
+    - error
+    - last
+  operator-linebreak:
+    - error
+    - before
+  new-cap:
+    - error
+    - capIsNewExceptionPattern: "^express\\.."
+  camelcase:
+    - error
+    - ignoreImports: true
+      ignoreDestructuring: true
+      properties: never
+      allow:
+        - "^if_M_"
+        - "^B_H_"
+  eol-last:
+    - error
+    - always
+  arrow-body-style:
+    - error
+    - always
+  one-var:
+    - error
+    - initialized: "consecutive"
