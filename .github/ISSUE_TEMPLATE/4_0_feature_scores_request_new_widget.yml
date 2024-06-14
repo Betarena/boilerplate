@@ -1,4 +1,4 @@
-name: ⚡️ Feature Request Internal (Widget)
+name: ⚡️ SCORES :|: (Widget) Feature Request Internal
 description: New Feature Request (Widget) by Internal Betarena Team
 title: "[FEATURE-I-W]: "
 labels: ["🌟 [A] enhancement", "🎨 Frontend"]
@@ -125,15 +125,15 @@ body:
   attributes:
     label: Related projects this feature will involve to achieve
     options:
-      - label: 🟦 |:| (frontend) |:| Scores
+      - label: 🟦 :|: (frontend) - Scores
         required: false
-      - label: 📦 |:| (package) |:| Scores-Lib
+      - label: 📦 :|: (package) - Scores-Lib
         required: false
-      - label: 🟥 |:| (worker/backend) |:| Cache / Sitemap
+      - label: 🟥 :|: (worker/backend) - Cache / Sitemap
         required: false
-      - label: 🟩 |:| (worker/backend) |:| Sportmonks / C# (backend)
+      - label: 🟩 :|: (worker/backend) - Delta Data Manager (C#)
         required: false
-      - label: 💠 |:| (package/backend) |:| Ad-engine
+      - label: 💠 :|: (package/backend) - Ad-engine
         required: false
-      - label: 🟨 |:| (worker/backend) |:| Firebase Functions (backend)
+      - label: 🟨 :|: (worker/backend) - Firebase Functions (backend)
         required: false
