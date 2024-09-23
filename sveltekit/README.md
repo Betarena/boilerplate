@@ -40,6 +40,8 @@ If a new `widget/component` is too complicated, such as it contains many `.svelt
 
 An example can be shown [here](https://github.com/Betarena/betarena_about/blob/feature/public-presale/draft/1-2/src/lib/ui/components/presale/presale-box/_store.ts).
 
+#### ───────────────────────────────────────────
+
 #### 🚫 Forbidden Code Blocks
 
 ##### 🔥 Derived Reactivity Statements from Svelte Stores of type `object`.
