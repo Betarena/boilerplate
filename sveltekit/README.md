@@ -39,13 +39,15 @@
 If a new `widget/component` is too complicated, such as it contains many `.svelte` files and/or has a complex state system, **ALWAYS** create a internal `_store.ts` file for the respective `widget/component`.
 
 Examples of this can be found:
-- [about/src/lib/ui/components/presale/presale-box](https://github.com/Betarena/betarena_about/blob/feature/public-presale/draft/1-2/src/lib/ui/components/presale/presale-box) -> `_store.ts`.
-- [scores/src/lib/components/_main_/auth](https://github.com/Betarena/scores/tree/main/src/lib/components/_main_/auth) -> `_store.ts`.
-- [scores/src/lib/components/page/profile/investor](https://github.com/Betarena/scores/tree/main/src/lib/components/page/profile/investor) -> `_store.ts`.
+- [about/src/lib/ui/components/presale/presale-box](https://github.com/Betarena/betarena_about/blob/feature/public-presale/draft/1-2/src/lib/ui/components/presale/presale-box) ➤ `_store.ts`.
+- [scores/src/lib/components/_main_/auth](https://github.com/Betarena/scores/tree/main/src/lib/components/_main_/auth) ➤ `_store.ts`.
+- [scores/src/lib/components/page/profile/investor](https://github.com/Betarena/scores/tree/main/src/lib/components/page/profile/investor) ➤ `_store.ts`.
 
 #### ───────────────────────────────────────────
 
 #### 🚫 Forbidden Code Blocks
+
+##### ───────────────────────────────────────────
 
 ##### 🔥 Derived Reactivity Statements from Svelte Stores of type `object`.
 
@@ -63,6 +65,8 @@ $: ({ someProperty } = $someStore);
 
 > [!NOTE]
 > REASON: Because it will re-trigger `value = [..]` each time the `$someStore` changes in any way, including due to the change of other `property` values.
+
+##### ───────────────────────────────────────────
 
 ##### 💠 Nested Component Property Drilling
 
