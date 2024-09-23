@@ -54,13 +54,17 @@ Examples of this can be found:
 ###### 🟥 Disallowed
 
 ```svelte
-$: value = ($someStore as object).someProperty;
+<script lang='ts'>
+  $: value = ($someStore as object).someProperty;
+</script>
 ```
 
 ###### 🟩 Exepected
 
 ```svelte
-$: ({ someProperty } = $someStore);
+<script lang='ts'>
+  $: ({ someProperty } = $someStore);
+</script>
 ```
 
 > [!NOTE]
