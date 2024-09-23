@@ -48,14 +48,68 @@ An example can be shown [here](https://github.com/Betarena/betarena_about/blob/f
 
 ###### 🟥 Disallowed
 
-```typescript
+```svelte
 $: value = ($someStore as object).someProperty;
 ```
 
-REASON: Because it will re-trigger `value = [..]` each time the `$someStore` changes in any way, including due to the change of other `property` values.
+###### 🟩 Exepected
+
+```svelte
+$: ({ someProperty } = $someStore);
+```
+
+> [!NOTE]
+> REASON: Because it will re-trigger `value = [..]` each time the `$someStore` changes in any way, including due to the change of other `property` values.
+
+##### 💠 Nested Component Property Drilling
+
+###### 🟥 Disallowed
+
+```svelte
+// 📝 Component-A.svelte
+
+<script lang='ts'>
+  import ComponentB from '.Component-B.svelte';
+
+  export let data: unknown;
+</script>
+
+<ComponentB {data} />
+```
+
+```svelte
+// 📝 Component-B.svelte
+
+<script lang='ts'>
+  import ComponentC from '.Component-C.svelte';
+
+  export let data: unknown;
+</script>
+
+<ComponentC {data} />
+```
 
 ###### 🟩 Exepected
 
-```typescript
-$: ({ someProperty } = $someStore);
+```svelte
+// 📝 Component-B.svelte
+
+<script lang='ts'>
+  import ComponentC from '.Component-C.svelte';
+
+  $: ({ data } = $someLocalStore);
+</script>
+
+<ComponentC {data} />
 ```
+
+```svelte
+// 📝 Component-C.svelte
+
+<script lang='ts'>
+  $: ({ data } = $someLocalStore);
+</script>
+```
+
+> [!NOTE]
+> REASON: Leads to bad coding structure and difficult to track data dependency. **ALWAYS** draw from a (1) store or (2) independent data access for such components that would otherwise depend on each other to pass along data.
