@@ -42,6 +42,18 @@ An example can be shown [here](https://github.com/Betarena/betarena_about/blob/f
 
 #### 🚫 Forbidden Code Blocks
 
+##### 🔥 Derived Reactivity Statements from Svelte Stores of type `object`.
+
+###### 🟥 Disallowed
+
 ```typescript
 $: value = ($someStore as object).someProperty;
+```
+
+REASON: Because it will re-trigger `value = [..]` each time the `$someStore` changes in any way, including due to the change of other `property` values.
+
+###### 🟩 Exepected
+
+```typescript
+$: ({ someProperty } = $someStore);
 ```
