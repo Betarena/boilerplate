@@ -38,7 +38,10 @@
 
 If a new `widget/component` is too complicated, such as it contains many `.svelte` files and/or has a complex state system, **ALWAYS** create a internal `_store.ts` file for the respective `widget/component`.
 
-An example can be shown [here](https://github.com/Betarena/betarena_about/blob/feature/public-presale/draft/1-2/src/lib/ui/components/presale/presale-box/_store.ts).
+Examples of this can be found:
+- [about/src/lib/ui/components/presale/presale-box](https://github.com/Betarena/betarena_about/blob/feature/public-presale/draft/1-2/src/lib/ui/components/presale/presale-box) -> `_store.ts`.
+- [scores/src/lib/components/_main_/auth](https://github.com/Betarena/scores/tree/main/src/lib/components/_main_/auth) -> `_store.ts`.
+- [scores/src/lib/components/page/profile/investor](https://github.com/Betarena/scores/tree/main/src/lib/components/page/profile/investor) -> `_store.ts`.
 
 #### ───────────────────────────────────────────
 
