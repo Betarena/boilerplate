@@ -111,7 +111,7 @@ Examples of this can be found:
   $: ({ data } = $someLocalStore);
 </script>
 
-<ComponentC {data} />
+<ComponentC />
 ```
 
 ```svelte
