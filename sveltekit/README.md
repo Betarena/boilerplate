@@ -1,4 +1,27 @@
-#### ⭐️ Creating new `.svelte` components (a.k.a widgets) should be structured as follows:
+---
+
+<details open="open">
+<summary>📑 Table of Contents</summary>
+
+- [🟧 Svelte/+Kit](#-sveltekit)
+  - [⭐️ Creating new components](#️-creating-new-components)
+    - [🎡 Complex state widgets](#-complex-state-widgets)
+  - [🚫 Forbidden Code Blocks](#-forbidden-code-blocks)
+    - [🔥 Derived Reactivity Statements from Svelte Stores of type `object`.](#-derived-reactivity-statements-from-svelte-stores-of-type-object)
+      - [🟥 Disallowed](#-disallowed)
+      - [🟩 Exepected](#-exepected)
+    - [💠 Nested Component Property Drilling](#-nested-component-property-drilling)
+      - [🟥 Disallowed](#-disallowed-1)
+      - [🟩 Exepected](#-exepected-1)
+</details>
+
+---
+
+### 🟧 Svelte/+Kit
+
+#### ⭐️ Creating new components
+
+When creating new `.svelte` components, please make sure to follow the following folder structure for respective widget.
 
 ```markdown
 /lib/
