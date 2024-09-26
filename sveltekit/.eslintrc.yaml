@@ -1,0 +1,186 @@
+root: true
+
+env:
+  es2017: true
+  node: true
+  browser: true
+
+extends:
+  - eslint:recommended
+  - plugin:svelte/recommended
+  - plugin:@typescript-eslint/strict
+  # ╭─────
+  # │ NOTE:
+  # │ ➤ (👇) below :: does not work with svelte.
+  # ╰─────
+  # - plugin:import/errors
+  # - plugin:import/warnings
+  # - plugin:import/typescript
+  # ╭─────
+  # │ NOTE:
+  # │ ➤ (👇) :|: https://www.npmjs.com/package/eslint-config-google
+  # ╰─────
+  # - google
+  # - prettier
+  # ╭─────
+  # │ NOTE:
+  # │ ➤ (👇) already contained within ../strict.
+  # ╰─────
+  # - plugin:@typescript-eslint/recommended
+  # - plugin:@typescript-eslint/stylistic
+
+parser:
+  "@typescript-eslint/parser"
+
+parserOptions:
+  project:
+    - tsconfig.json
+  sourceType: module
+  ecmaVersion: 2020
+  extraFileExtensions:
+    - '.svelte'
+    - '.ts'
+
+overrides:
+  - files:
+    - '*.svelte'
+    parser: 'svelte-eslint-parser'
+    parserOptions:
+      parser: '@typescript-eslint/parser'
+
+globals:
+  # 🔗 read-more :|: https://github.com/Chatie/eslint-config/issues/45#issuecomment-885507652
+  "NodeJS": true
+
+ignorePatterns:
+  - .DS_Store
+  - node_modules
+  - /build
+  - /.svelte-kit
+  - /package
+  - .env
+  - .env.*
+  - '!.env.example'
+  - pnpm-lock.yaml
+  - package-lock.json
+  - yarn.lock
+  # ╭─────
+  # │ NOTE: |:| gradual eslint introduction in project.
+  # ╰─────
+  # - src/lib/store
+  # - src/routes
+  - src/lib/geo-js
+  - src/lib/graphql
+  - src/lib/redis
+  # - src/lib/store
+  - src/routes/api
+  - src/lib/types
+  - src/params
+  - src/service-worker.ts
+
+plugins:
+  - "@typescript-eslint"
+  - svelte
+  # ╭─────
+  # │ WARNING:
+  # │ ➤ (👇) all-below :: does not work with svelte.
+  # ╰─────
+  # - import
+
+# ╭─────
+# │ IMPORTANT
+# │ ➤ Main 'defacto' configuration, do not remove and/or alter heavily.
+# │ ➤ 🔗 read-more :|: https://eslint.org/docs/latest/rules/
+# ╰─────
+rules:
+
+  # ╭─────
+  # │ NOTE:
+  # │ ➤ (👇) for svelte/sveltekit project only!
+  # ╰─────
+  'svelte/valid-compile': 0
+  'svelte/no-at-html-tags': 0
+
+  # ╭─────
+  # │ NOTE:
+  # │ ➤ has been depreceted.
+  # ╰─────
+  # "valid-jsdoc": [..]
+  no-unexpected-multiline: 0
+  import/no-unresolved: 0
+
+  # ╭─────
+  # │ NOTE:
+  # │ ➤ Ideal, but doesn't work as expected :: [ "error", "always", {  "allowNewlines": true } ]
+  # │ ➤ as it requires a space after function declaration, 'always'.
+  # ╰─────
+  func-call-spacing: 0
+
+  '@typescript-eslint/no-inferrable-types': 0
+  '@typescript-eslint/prefer-for-of': error
+  '@typescript-eslint/no-non-null-asserted-nullish-coalescing': error
+
+  no-console:
+    - error
+  curly:
+    - error
+    - multi
+    - consistent
+  max-len:
+    - error
+    - code: 250
+  quotes:
+    - error
+    - single
+  object-curly-spacing:
+    - error
+    - always
+  brace-style:
+    - error
+    - allman
+    - allowSingleLine: true
+  indent:
+    - error
+    - 2
+    - SwitchCase: 1
+  space-before-function-paren:
+    - error
+    - anonymous: always
+      named: always
+      asyncArrow: always
+  padded-blocks:
+    - error
+    - blocks: never
+  comma-dangle:
+    - error
+    - only-multiline
+  comma-style:
+    - error
+    - last
+  operator-linebreak:
+    - error
+    - before
+  new-cap:
+    - error
+    - capIsNewExceptionPattern: "^express\\.."
+  camelcase:
+    - error
+    - ignoreImports: true
+      ignoreDestructuring: true
+      properties: never
+      allow:
+        - "^if_M_"
+        - "^B_H_"
+        - "^icon_"
+  eol-last:
+    - error
+    - always
+  arrow-body-style:
+    - error
+    - always
+  one-var:
+    - error
+    - initialized: "consecutive"
+  no-extra-semi: 0
+  no-var:
+    - error
