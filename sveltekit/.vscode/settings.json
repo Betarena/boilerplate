@@ -1,0 +1,148 @@
+{
+  // ╭──────────────────────────────────────────────────────────────────╮
+  // │ 🟦 VSCODE                                                        │
+  // │ 🟦 |: Local Workspace/Folder Configuration (Editor)              │
+  // ╰──────────────────────────────────────────────────────────────────╯
+
+  // ╭───────────────────────────────
+  // │ 🔗 read-more |:| https://stackoverflow.com/questions/64365300/how-can-i-remove-unused-imports-declarations-from-the-entire-project-of-react-ty
+  // │ 🔗 read-more |:| https://stackoverflow.com/questions/46722701/is-there-a-way-to-remove-unused-imports-and-declarations-from-angular-2
+  // │ 🔗 read-more |:| https://stackoverflow.com/a/49777201/8421215
+  // ╰───────────────────────────────
+  "editor.codeActionsOnSave":
+  {
+    // "source.fixAll": "explicit",
+    // "source.organizeImports": "explicit",
+    // "source.sortMembers": "explicit"
+  },
+  "editor.folding": true,
+  "editor.showFoldingControls": "always",
+  "editor.foldingStrategy": "indentation",
+  "editor.foldingImportsByDefault": true,
+  "files.exclude":
+  {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+    "**/.git/objects/**": true,
+    "**/tmp": true,
+    "**/bower_components": true,
+    "**/.svelte-kit/**": true,
+    "**/._*": true
+  },
+
+  // ╭──────────────────────────────────────────────────────────────────╮
+  // │ 🟨 VSCODE                                                        │
+  // │ 🟨 |: Local Workspace/Folder Configuration (Extensions)          │
+  // ╰──────────────────────────────────────────────────────────────────╯
+
+  // ╭───────────────────────────────
+  // │ NOTE:
+  // │ EsLint |:| workspace (folder) configuration
+  // ╰───────────────────────────────
+  "eslint.enable": true,
+  "eslint.validate":
+  [
+    "javascript",
+    "javascriptreact",
+    "svelte"
+  ],
+
+  // ╭───────────────────────────────
+  // │ NOTE: |:| [extension]
+  // │ Name                :: Svelte for VS Code
+  // │ Id                  :: svelte.svelte-vscode
+  // │ Vs-MarketPlace-Link :: https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode
+  // ┣───────────────────────────────
+  // | 🔗 read-more |:| https://discord.com/channels/457912077277855764/1036919129782878218
+  // | 🔗 read-more |:| https://discord.com/channels/457912077277855764/1036369208721813554
+  // ╰───────────────────────────────
+  "svelte.plugin.svelte.compilerWarnings":
+  {
+    "a11y-click-events-have-key-events":  "ignore",
+    "a11y-aria-attributes": "ignore",
+    "a11y-incorrect-aria-attribute-type": "ignore",
+    "a11y-unknown-aria-attribute": "ignore",
+    "a11y-hidden": "ignore",
+    "a11y-misplaced-role": "ignore",
+    "a11y-unknown-role": "ignore",
+    "a11y-no-abstract-role": "ignore",
+    "a11y-no-redundant-roles": "ignore",
+    "a11y-role-has-required-aria-props": "ignore",
+    "a11y-accesskey": "ignore",
+    "a11y-autofocus": "ignore",
+    "a11y-misplaced-scope": "ignore",
+    "a11y-positive-tabindex": "ignore",
+    "a11y-invalid-attribute": "ignore",
+    "a11y-missing-attribute": "ignore",
+    "a11y-img-redundant-alt": "ignore",
+    "a11y-label-has-associated-control": "ignore",
+    "a11y-media-has-caption": "ignore",
+    "a11y-distracting-elements": "ignore",
+    "a11y-structure": "ignore",
+    "a11y-mouse-events-have-key-events": "ignore",
+    "a11y-missing-content": "ignore",
+  },
+
+  // ╭───────────────────────────────
+  // │ NOTE: |:| [extension]
+  // │ Name                :: #region folding for VS Code
+  // │ Id                  :: maptz.regionfolder
+  // │ Vs-MarketPlace-Link :: https://marketplace.visualstudio.com/items?itemName=maptz.regionfolder
+  // ╰───────────────────────────────
+  "maptz.regionfolder":
+  {
+    "collapseAllRegions": true,
+    "collapseDefaultRegionsOnOpen": true
+  },
+
+  // ╭───────────────────────────────
+  // │ NOTE: |:| [extension]
+  // │ Name                :: CSS Peek
+  // │ Id                  :: pranaygp.vscode-css-peek
+  // │ Vs-MarketPlace-Link :: https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek
+  // ┣───────────────────────────────
+  // │ IMPORTANT |:| does not work for SVELTE
+  // ╰───────────────────────────────
+  "cssPeek.peekFromLanguages":
+  [
+    "html",
+    "svelte"
+  ],
+
+  // ╭───────────────────────────────
+  // │ NOTE: |:| [extension]
+  // │ Name                :: HTML CSS Support
+  // │ Id                  :: ecmel.vscode-html-css
+  // │ Vs-MarketPlace-Link :: https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css
+  // ╰───────────────────────────────
+  "css.styleSheets":
+  [
+    // "https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css", // example
+    "/static/app.css"
+  ],
+  // IMPORTANT |:| configured in user/settings.json
+  "css.enabledLanguages":
+  [
+    "html",
+    "svelte"
+  ],
+
+  // ╭───────────────────────────────
+  // │ NOTE: |:| [extension]
+  // │ Name                :: Material Icon Theme
+  // │ Id                  :: PKief.material-icon-theme
+  // │ Vs-MarketPlace-Link :: https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+  // ╰───────────────────────────────
+  "material-icon-theme.folders.associations":
+  {
+    // "redis": "Database", // EXAMPLE
+  },
+}
