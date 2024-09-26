@@ -68,7 +68,11 @@ Examples of this can be found:
 ```
 
 > [!NOTE]
-> REASON: Because it will re-trigger `value = [..]` each time the `$someStore` changes in any way, including due to the change of other `property` values.
+> **REASON:**
+> 
+> Because it will re-trigger `value = [..]` each time the `$someStore` changes in any way.
+> 
+> Including due to the change of some other (a.k.a `$someStore.property`) value, which can lead to the dreaded `Reactivity Infinity Loop`.
 
 ##### ───────────────────────────────────────────
 
@@ -123,4 +127,8 @@ Examples of this can be found:
 ```
 
 > [!NOTE]
-> REASON: Leads to bad coding structure and difficult to track data dependency. **ALWAYS** draw from a (1) store or (2) independent data access for such components that would otherwise depend on each other to pass along data.
+> **REASON:**
+>
+> (1) Leads to bad coding structure, which directly affects respective file structure and (2) is difficult to track data dependency when making changes or maintaining code.
+>
+> **ALWAYS, ALWAYS** extract from an: (1) independent store or (2) an alternative data access module for such components, that would otherwise depend on each other to pass along data.
