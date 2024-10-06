@@ -164,23 +164,23 @@ Examples of this can be found:
 
 ```scss
 :global(html) {
-	overflow-x: hidden;
-	overflow-y: overlay;
+  overflow-x: hidden;
+  overflow-y: overlay;
 }
 
 :global(body) {
-	:global(figure) {
-		margin: 0;
-	}
+  :global(figure) {
+     margin: 0;
+   }
 }
 
 :global(img) {
-	max-width: 100%;
-	display: block;
+  max-width: 100%;
+  display: block;
 }
 
 :global(button) {
-	cursor: pointer;
+  cursor: pointer;
 }
 ```
 
@@ -191,27 +191,27 @@ Examples of this can be found:
 {
   html
   {
-  	overflow-x: hidden;
-  	overflow-y: overlay;
+    overflow-x: hidden;
+    overflow-y: overlay;
   }
 
   body
   {
-  	figure
+    figure
     {
-  		margin: 0;
-  	}
+      margin: 0;
+    }
   }
   
   img
   {
-  	max-width: 100%;
-  	display: block;
+    max-width: 100%;
+    display: block;
   }
   
   button
   {
-  	cursor: pointer;
+    cursor: pointer;
   }
 }
 ```
