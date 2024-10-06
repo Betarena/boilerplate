@@ -155,3 +155,70 @@ Examples of this can be found:
 > (1) Leads to bad coding structure, which directly affects respective file structure and (2) is difficult to track data dependency when making changes or maintaining code.
 >
 > **ALWAYS, ALWAYS** extract from an: (1) independent store or (2) an alternative data access module for such components, that would otherwise depend on each other to pass along data.
+
+##### ───────────────────────────────────────────
+
+##### 🎨 Declare `:global()` using cleaner structure
+
+###### 🟥 Disallowed
+
+```scss
+:global(html) {
+	overflow-x: hidden;
+	overflow-y: overlay;
+}
+
+:global(body) {
+	:global(figure) {
+		margin: 0;
+	}
+}
+
+:global(img) {
+	max-width: 100%;
+	display: block;
+}
+
+:global(button) {
+	cursor: pointer;
+}
+```
+
+###### 🟩 Exepected
+
+```scss
+:global
+{
+  html
+  {
+  	overflow-x: hidden;
+  	overflow-y: overlay;
+  }
+
+  body
+  {
+  	figure
+    {
+  		margin: 0;
+  	}
+  }
+  
+  img
+  {
+  	max-width: 100%;
+  	display: block;
+  }
+  
+  button
+  {
+  	cursor: pointer;
+  }
+}
+```
+
+> [!NOTE]
+> **REASON:**
+>
+> Style simplification for easier readability and identification of conflicting `styles` when doing fixes.
+>
+> Make sure that `:global { .. }` is used instead of `:global(..) { .. }`.
