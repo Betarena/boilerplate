@@ -13,6 +13,9 @@
     - [💠 Nested Component Property Drilling](#-nested-component-property-drilling)
       - [🟥 Disallowed](#-disallowed-1)
       - [🟩 Exepected](#-exepected-1)
+    - [🎨 Declare `:global()` using cleaner structure](#-declare-global-using-cleaner-structure)
+      - [🟥 Disallowed](#-disallowed-2)
+      - [🟩 Exepected](#-exepected-2)   
 </details>
 
 ---
