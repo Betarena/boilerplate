@@ -45,6 +45,7 @@ lib/
                 │: 📝 Contains respective loaders.
                 ╰───
             ├── New-Widget-Widget.svelte
+                ╭───
                 │: 📝 Is the MAIN entry point to the widget that is being created, think of it as the *handler*
                 │:    for the widget, containing "data" getter for the widget, and showing loaders.
                 ╰───
