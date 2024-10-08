@@ -28,43 +28,48 @@ When creating new `.svelte` components, please make sure to follow the following
 
 ```markdown
 /lib/
-  ─────────────────────────────────────────────────────────────────────────────────────────────
-  ↳ components/
-    ─────────────────────────────────────────────────────────────────────────────────────────────
-    ↳ <-INSERT-target-section-belongs-to->/
-      ─────────────────────────────────────────────────────────────────────────────────────────────
-      ↳ <-INSERT-widget->/
-          | 📣 Contains respective new widget/component (1) assets, (2) component code, (3) preloaders, etc.
-        ─────────────────────────────────────────────────────────────────────────────────────────────
-        ↳ .assets/
-            | 📝 Contains respective assets used by THIS widget/component.
-          ↳ *.png
-          ↳ *.svg
-        ─────────────────────────────────────────────────────────────────────────────────────────────
-        ↳ loaders/
-            | 📝 Contains respective loaders.
-        ─────────────────────────────────────────────────────────────────────────────────────────────
-        ↳ New-Widget-Widget.svelte
-            | 📝 Is the MAIN entry point to the widget that is being created, think of it as the *handler*
-            |    for the widget, containing "data" getter for the widget, and showing loaders.
-            | 📌 Check 'src/lib/components/page/profile/investor/Widget-Investor.svelte' for example.
-        ─────────────────────────────────────────────────────────────────────────────────────────────
-        ↳ New-Widget-Main.svelte
-            | 📝 Is the MAIN widget layout, design and logic, after the parent [...]-Widget.svelte has loaded all necessary
-            |    data and deemed it OK to show the widget.
-            |    THIS contains the overall MAIN widget UI and LOGIC. As well as, necessary child components.
-        ─────────────────────────────────────────────────────────────────────────────────────────────
-        ↳ New-Widget-Loader.svelte
-            | 📝 Is the MAIN widget loader layout, used for showing the widget outline and it's preloading-state. Used in
-            |    conjuction with the .svelte files in the laoders/ folder, containing .svg elements within.
-            |    Not always used, because some widgets do not have a pre-loader animation, in which case, this widget/component can be ignored.
+└── components/
+    └── <-INSERT-TARGET-SECTION/PAGE/GROUP-COMPONENT-WILL-BELONG-TO->/
+        └── <-INSERT-COMPONENT-NAME->/
+                ╭───
+                │: 📝 Contains respective new widget/component (1) assets, (2) component code, (3) preloaders, etc.
+                ╰───
+            ├── .assets/
+                ╭───
+                │: 📝 Contains respective assets used by THIS widget/component.
+                ╰───
+                ├── *.png
+                └── *.svg
+            ├── loaders/
+                ╭───
+                │: 📝 Contains respective loaders.
+                ╰───
+            ├── New-Widget-Widget.svelte
+                │: 📝 Is the MAIN entry point to the widget that is being created, think of it as the *handler*
+                │:    for the widget, containing "data" getter for the widget, and showing loaders.
+                ╰───
+            ├── New-Widget-Main.svelte
+                ╭───
+                │: 📝 Is the MAIN widget layout, design and logic, after the parent [...]-Widget.svelte has loaded all necessary
+                │:    data and deemed it OK to show the widget.
+                │:    THIS contains the overall MAIN widget UI and LOGIC. As well as, necessary child components.
+                ╰───
+            ├── New-Widget-Loader.svelte
+                ╭───
+                │: 📝 Is the MAIN widget loader layout, used for showing the widget outline and it's preloading-state. Used in
+                │:    conjuction with the .svelte files in the laoders/ folder, containing .svg elements within.
+                │:    Not always used, because some widgets do not have a pre-loader animation, in which case, this widget/component can be ignored.
+                ╰───
 ```
+
+⭐️ Examples of this can be found:
+- [scores/src/lib/components/page/profile/investor](https://github.com/Betarena/scores/tree/main/src/lib/components/page/profile/investor)
 
 ##### 🎡 Complex state widgets
 
 If a new `widget/component` is too complicated, such as it contains many `.svelte` files and/or has a complex state system, **ALWAYS** create a internal `_store.ts` file for the respective `widget/component`.
 
-Examples of this can be found:
+⭐️ Examples of this can be found:
 - [about/src/lib/ui/components/presale/presale-box](https://github.com/Betarena/betarena_about/blob/feature/public-presale/draft/1-2/src/lib/ui/components/presale/presale-box) ➤ `_store.ts`.
 - [scores/src/lib/components/_main_/auth](https://github.com/Betarena/scores/tree/main/src/lib/components/_main_/auth) ➤ `_store.ts`.
 - [scores/src/lib/components/page/profile/investor](https://github.com/Betarena/scores/tree/main/src/lib/components/page/profile/investor) ➤ `_store.ts`.
