@@ -27,7 +27,7 @@
 When creating new `.svelte` components, please make sure to follow the following folder structure for respective widget.
 
 ```markdown
-/lib/
+lib/
 └── components/
     └── <-INSERT-TARGET-SECTION/PAGE/GROUP-COMPONENT-WILL-BELONG-TO->/
         └── <-INSERT-COMPONENT-NAME->/
