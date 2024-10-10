@@ -5,6 +5,7 @@
 
 - [🟧 Svelte/+Kit](#-sveltekit)
   - [🚏 Creating new routes](#-creating-new-routes)
+  - [🔄 Creating new load(s)](#-creating-new-loads)
   - [⭐️ Creating new components](#️-creating-new-components)
     - [🎡 Complex state widgets](#-complex-state-widgets)
   - [🚫 Forbidden Code Blocks](#-forbidden-code-blocks)
@@ -52,6 +53,29 @@ All routes should be placed using conditions into `+server.ts`, with their respe
 ⭐️ Examples of this can be found:
 - [1a] - [src/lib/sveltekit/endpoint/*](https://github.com/Betarena/betarena_about/tree/feature/public-presale/draft/1-2-3/src/lib/sveltekit/endpoint)
 - [1b] - [src/routes/api/data/\[...path\]/+server.ts](https://github.com/Betarena/betarena_about/blob/feature/public-presale/draft/1-2-3/src/routes/api/data/%5B...path%5D/%2Bserver.ts)
+
+#### ───────────────────────────────────────────
+
+#### 🔄 Creating new load(s)
+
+In a similar fashion to [🚏 Creating new routes](#-creating-new-routes), load functions should be structured as follows:
+
+```markdown
+src/
+└── lib/
+    └── sveltekit/
+        └── load/
+            ├── <page-name>.ts
+            └── <page-name>.ts
+```
+
+These `<page-name>.ts` sub-modules should be consumed only by their `+page(.server).ts` counterpart(s) located in the `routes/*` directory.
+
+⭐️ Examples of this can be found:
+- [1a] - [scores/src/routes/(scores)/u/\[view\]/\[lang=lang\]
+/+page.server.ts](https://github.com/Betarena/scores/blob/main/src/routes/(scores)/u/%5Bview%5D/%5Blang%3Dlang%5D/%2Bpage.server.ts)
+- [1a] - [scores/src/lib/sveltekit/load
+/load.lang.ts](https://github.com/Betarena/scores/blob/main/src/lib/sveltekit/load/load.lang.ts)
 
 #### ───────────────────────────────────────────
 
