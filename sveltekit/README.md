@@ -30,15 +30,16 @@ When creating new `.ts` routes (a.k.a endpoints), please make sure to follow the
 
 ```markdown
 src/
-└── sveltekit/
-    └── endpoint/
-        ├── <data|widget>.<name>.ts
-        ├── <data|widget>.<name>.ts
-        └── <data|widget>.<name>.ts
-    └── routes/
-        └── api/
-            └── [...path]/
-                └── +server.ts
+├── lib/
+    └── sveltekit/
+        └── endpoint/
+            ├── <data|widget>.<name>.ts
+            ├── <data|widget>.<name>.ts
+            └── <data|widget>.<name>.ts
+└── routes/
+    └── api/
+        └── [...path]/
+            └── +server.ts
 ```
 
 All routes should be placed using conditions into `+server.ts`, with their respective logic offloaded into sub-modules.
