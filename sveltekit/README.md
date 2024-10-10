@@ -4,18 +4,20 @@
 <summary>📑 Table of Contents</summary>
 
 - [🟧 Svelte/+Kit](#-sveltekit)
+  - [🚏 Creating new routes](#-creating-new-routes)
   - [⭐️ Creating new components](#️-creating-new-components)
     - [🎡 Complex state widgets](#-complex-state-widgets)
   - [🚫 Forbidden Code Blocks](#-forbidden-code-blocks)
     - [🔥 Derived Reactivity Statements from Svelte Stores of type `object`.](#-derived-reactivity-statements-from-svelte-stores-of-type-object)
       - [🟥 Disallowed](#-disallowed)
       - [🟩 Exepected](#-exepected)
-    - [💠 Nested Component Property Drilling](#-nested-component-property-drilling)
+    - [📉 Nested Component Property Drilling](#-nested-component-property-drilling)
       - [🟥 Disallowed](#-disallowed-1)
       - [🟩 Exepected](#-exepected-1)
+  - [💠 Styling Preferrence](#-styling-preferrence)
     - [🎨 Declare `:global()` using cleaner structure](#-declare-global-using-cleaner-structure)
       - [🟥 Disallowed](#-disallowed-2)
-      - [🟩 Exepected](#-exepected-2)   
+      - [🟩 Exepected](#-exepected-2)
 </details>
 
 ---
@@ -25,6 +27,9 @@
 #### ───────────────────────────────────────────
 
 #### 🚏 Creating new routes
+
+> [!CAUTION]
+> Any endpoint created/updated should be documented in an already existing [`openapi.yaml`](https://swagger.io/specification/), located in the project root `(./)` or elsewhere.
 
 When creating new `.ts` routes (a.k.a endpoints), please make sure to follow the following folder structrue:
 
@@ -45,8 +50,8 @@ src/
 All routes should be placed using conditions into `+server.ts`, with their respective logic offloaded into sub-modules.
 
 ⭐️ Examples of this can be found:
-- [1] - [src/lib/sveltekit/endpoint](https://github.com/Betarena/betarena_about/tree/feature/public-presale/draft/1-2-3/src/lib/sveltekit/endpoint)
-- [1] - [src/routes/api/data/\[...path\]/+server.ts](https://github.com/Betarena/betarena_about/blob/feature/public-presale/draft/1-2-3/src/routes/api/data/%5B...path%5D/%2Bserver.ts)
+- [1a] - [src/lib/sveltekit/endpoint/*](https://github.com/Betarena/betarena_about/tree/feature/public-presale/draft/1-2-3/src/lib/sveltekit/endpoint)
+- [1b] - [src/routes/api/data/\[...path\]/+server.ts](https://github.com/Betarena/betarena_about/blob/feature/public-presale/draft/1-2-3/src/routes/api/data/%5B...path%5D/%2Bserver.ts)
 
 #### ───────────────────────────────────────────
 
