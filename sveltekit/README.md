@@ -22,6 +22,33 @@
 
 ### 🟧 Svelte/+Kit
 
+#### ───────────────────────────────────────────
+
+#### 🚏 Creating new routes
+
+When creating new `.ts` routes (a.k.a endpoints), please make sure to follow the following folder structrue:
+
+```markdown
+src/
+└── sveltekit/
+    └── endpoint/
+        ├── <data|widget>.<name>.ts
+        ├── <data|widget>.<name>.ts
+        └── <data|widget>.<name>.ts
+    └── routes/
+        └── api/
+            └── [...path]/
+                └── +server.ts
+```
+
+All routes should be placed using conditions into `+server.ts`, with their respective logic offloaded into sub-modules.
+
+⭐️ Examples of this can be found:
+- [1] - [src/lib/sveltekit/endpoint](https://github.com/Betarena/betarena_about/tree/feature/public-presale/draft/1-2-3/src/lib/sveltekit/endpoint)
+- [1] - [src/routes/api/data/\[...path\]/+server.ts](https://github.com/Betarena/betarena_about/blob/feature/public-presale/draft/1-2-3/src/routes/api/data/%5B...path%5D/%2Bserver.ts)
+
+#### ───────────────────────────────────────────
+
 #### ⭐️ Creating new components
 
 When creating new `.svelte` components, please make sure to follow the following folder structure for respective widget.
@@ -108,7 +135,7 @@ If a new `widget/component` is too complicated, such as it contains many `.svelt
 
 ##### ───────────────────────────────────────────
 
-##### 💠 Nested Component Property Drilling
+##### 📉 Nested Component Property Drilling
 
 ###### 🟥 Disallowed
 
@@ -164,6 +191,10 @@ If a new `widget/component` is too complicated, such as it contains many `.svelt
 > (1) Leads to bad coding structure, which directly affects respective file structure and (2) is difficult to track data dependency when making changes or maintaining code.
 >
 > **ALWAYS, ALWAYS** extract from an: (1) independent store or (2) an alternative data access module for such components, that would otherwise depend on each other to pass along data.
+
+#### ───────────────────────────────────────────
+
+#### 💠 Styling Preferrence
 
 ##### ───────────────────────────────────────────
 
