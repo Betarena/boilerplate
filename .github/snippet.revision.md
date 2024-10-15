@@ -1,6 +1,6 @@
 ## ❗️ Revision / Issues
 
-<details>
+<details open>
   <summary>[1] insert-question-here</summary>
   <br/>
 
