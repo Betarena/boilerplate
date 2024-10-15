@@ -23,7 +23,10 @@
 ---
 
 > [!NOTE]
-> How it should look like on the issue comments, when a new one is opened (👇):
+> How it should look like on the issue comments, when a new revision/issue is identified (see example below):
+
+> [!NOTE]
+> Issues/revisions that have been verified by an assigned team member, are to be tagged with a prefix `[X] 🟩 | [..]` for completed state show (see example below).
 
 ## ❗️ Revision / Issues
 
@@ -48,7 +51,7 @@
 ---
 
 <details>
-  <summary>[2] insert-another-question-here</summary>
+  <summary>[2] 🟩 | insert-another-question-here</summary>
   <br/>
 
   <img
@@ -68,7 +71,7 @@
 ---
 
 <details>
-  <summary>[3] insert-another-question-here</summary>
+  <summary>[3] 🟩 | insert-another-question-here</summary>
   <br/>
 
   <img
