@@ -1,4 +1,4 @@
-## 🎬 Snippet (copy)
+# 🎬 Snippet (copy)
 
 ```markdown
 <details>
@@ -22,16 +22,18 @@
 
 ---
 
+# ✨ Example
+
 > [!NOTE]
 > How it should look like on the issue comments, when a new revision/issue is identified (see example below):
 
 > [!NOTE]
-> Issues/revisions that have been verified by an assigned team member, are to be tagged with a prefix `[X] 🟩 | [..]` for completed state show (see example below).
+> Verified issue(s) / revision(s), should contain prefix `[X] 🟩 | [..]` (see example below).
 
 ## ❗️ Revision / Issues
 
 <details open>
-  <summary>[1] insert-question-here</summary>
+  <summary>[1] insert-question-here (opened dropdown)</summary>
   <br/>
 
   <img
