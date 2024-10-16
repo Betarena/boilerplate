@@ -50,7 +50,7 @@ src/
 
 All routes should be placed using conditions into `+server.ts`, with their respective logic offloaded into sub-modules.
 
-⭐️ Examples of this can be found:
+**⭐️ Example(s):**
 - [1a] - [src/lib/sveltekit/endpoint/*](https://github.com/Betarena/betarena_about/tree/feature/public-presale/draft/1-2-3/src/lib/sveltekit/endpoint)
 - [1b] - [src/routes/api/data/\[...path\]/+server.ts](https://github.com/Betarena/betarena_about/blob/feature/public-presale/draft/1-2-3/src/routes/api/data/%5B...path%5D/%2Bserver.ts)
 
@@ -71,7 +71,7 @@ src/
 
 These `<page-name>.ts` sub-modules should be consumed only by their `+page(.server).ts` counterpart(s) located in the `routes/*` directory.
 
-⭐️ Examples of this can be found:
+**⭐️ Example(s):**
 - [1a] - [scores/src/routes/(scores)/u/\[view\]/\[lang=lang\]
 /+page.server.ts](https://github.com/Betarena/scores/blob/main/src/routes/(scores)/u/%5Bview%5D/%5Blang%3Dlang%5D/%2Bpage.server.ts)
 - [1a] - [scores/src/lib/sveltekit/load
@@ -120,14 +120,14 @@ lib/
                 ╰───
 ```
 
-⭐️ Examples of this can be found:
+**⭐️ Example(s):**
 - [scores/src/lib/components/page/profile/investor](https://github.com/Betarena/scores/tree/main/src/lib/components/page/profile/investor)
 
 ##### 🎡 Complex state widgets
 
 If a new `widget/component` is too complicated, such as it contains many `.svelte` files and/or has a complex state system, **ALWAYS** create a internal `_store.ts` file for the respective `widget/component`.
 
-⭐️ Examples of this can be found:
+**⭐️ Example(s):**
 - [about/src/lib/ui/components/presale/presale-box](https://github.com/Betarena/betarena_about/blob/feature/public-presale/draft/1-2/src/lib/ui/components/presale/presale-box) ➤ `_store.ts`.
 - [scores/src/lib/components/_main_/auth](https://github.com/Betarena/scores/tree/main/src/lib/components/_main_/auth) ➤ `_store.ts`.
 - [scores/src/lib/components/page/profile/investor](https://github.com/Betarena/scores/tree/main/src/lib/components/page/profile/investor) ➤ `_store.ts`.
