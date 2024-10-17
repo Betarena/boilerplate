@@ -1,6 +1,7 @@
 # 🎬 Snippet (copy)
 
 ```markdown
+---
 <details>
   <summary>[1] insert-question-here</summary>
   <br/>
@@ -18,6 +19,7 @@
 
   <-insert-here-issue-updates->
 </details>
+---
 ```
 
 ---
