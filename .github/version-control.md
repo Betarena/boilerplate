@@ -42,11 +42,13 @@ If you are using `VsCode`, make use of the `adam-bender.commit-message-editor` e
 
 ## 🔀 Branches
 
-The used branching strategy at **Betarena** is [`Git Flow`](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow), enforced by [**`husky`**](https://github.com/typicode/husky).
+The used branching strategy at **Betarena** is [`GitHub Flow`](https://docs.github.com/en/get-started/using-github/github-flow).
 
-**📌 Branch Example**
+![image](https://github.com/user-attachments/assets/496fa629-3fc8-44f5-a83c-a7d47cf88707)
 
-A typical branch name would take the following `regex` form:
+### 💠 Branch nomenclature
+
+Enforced by (1) [**`husky`**](https://github.com/typicode/husky) & (2) internal GitHub repository configuration, will take the following `regex` form:
 
 `^(master|main|develop|dev){1}$|^(feature|fix|hotfix|release|refactor|chore).+$`
 
