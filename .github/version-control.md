@@ -44,7 +44,11 @@ If you are using `VsCode`, make use of the `adam-bender.commit-message-editor` e
 
 The used branching strategy at **Betarena** is [`GitHub Flow`](https://docs.github.com/en/get-started/using-github/github-flow).
 
-![image](https://github.com/user-attachments/assets/496fa629-3fc8-44f5-a83c-a7d47cf88707)
+<img 
+  width="686" 
+  alt="image" 
+  src="https://github.com/user-attachments/assets/496fa629-3fc8-44f5-a83c-a7d47cf88707"
+/>
 
 ### 💠 Branch nomenclature
 
