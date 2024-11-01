@@ -40,7 +40,7 @@ refactor(example): showcase
 
 If you are using `VsCode`, make use of the `adam-bender.commit-message-editor` extension that would ease up commit message write up.
 
-## 🔀 Branches
+## 🔀 Branches & Workflow
 
 The used branching strategy at **Betarena** is [`GitHub Flow`](https://docs.github.com/en/get-started/using-github/github-flow).
 
