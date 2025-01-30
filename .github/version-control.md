@@ -47,7 +47,7 @@ The used branching strategy at **Betarena** is [`GitHub Flow`](https://docs.gith
 <img 
   width="686" 
   alt="image" 
-  src="https://github.com/user-attachments/assets/496fa629-3fc8-44f5-a83c-a7d47cf88707"
+  src="https://github.com/user-attachments/assets/58956977-aac1-4125-8445-9dddaac8ad9c"
 />
 
 ### 💠 Branch nomenclature
